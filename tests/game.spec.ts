@@ -45,6 +45,20 @@ test("plays a mixed round with sound and mime cards", async ({ page }) => {
   expect(cardTypes).toEqual(new Set(["Baralla de sons", "Baralla de mímica"]))
 })
 
+test("keeps the mixed deck title on one line on narrow screens", async ({ page }) => {
+  await page.setViewportSize({ width: 361, height: 800 })
+  await page.goto("/")
+
+  const title = page.locator(".deck-choice--mixed .deck-choice__copy strong")
+  const lineCount = await title.evaluate((element) => {
+    const range = document.createRange()
+    range.selectNodeContents(element)
+    return range.getClientRects().length
+  })
+
+  expect(lineCount).toBe(1)
+})
+
 test("completes an eight-card round", async ({ page }) => {
   await page.goto("/")
   await page.getByRole("button", { name: /Juga amb la baralla de sons/ }).click()
