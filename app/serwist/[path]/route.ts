@@ -19,7 +19,9 @@ export const { dynamic, dynamicParams, revalidate, generateStaticParams, GET } =
   {
     additionalPrecacheEntries: [
       { url: "/", revision },
+      { url: "/apple-icon.png", revision },
       { url: "/favicon.ico", revision },
+      { url: "/icon.svg", revision },
       { url: "/manifest.webmanifest", revision },
     ],
     globPatterns: [".next/static/**/*", "public/**/*"],

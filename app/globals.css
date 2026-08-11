@@ -299,14 +299,14 @@
 
 .deck-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(1rem, 3vw, 1.75rem);
 }
 
 .deck-choice {
   position: relative;
   min-width: 0;
-  min-height: 19rem;
+  min-height: 21rem;
   border: 0;
   border-radius: 1.7rem;
   background: none;
@@ -355,6 +355,15 @@
   background: var(--sky);
 }
 
+.deck-choice--mixed .deck-choice__face {
+  background: linear-gradient(
+    135deg,
+    var(--coral) 0 49.5%,
+    var(--paper) 49.5% 50.5%,
+    var(--sky) 50.5% 100%
+  );
+}
+
 .deck-choice__topline {
   display: contents;
 }
@@ -393,9 +402,15 @@
   line-height: 1;
 }
 
+.deck-choice__art--mixed {
+  font-size: clamp(3.5rem, 7vw, 5.5rem);
+  letter-spacing: 0.08em;
+}
+
 .deck-choice__copy {
   display: flex;
   min-width: 0;
+  align-self: end;
   flex-direction: column;
   gap: 0.15rem;
 }
@@ -405,20 +420,27 @@
   font-size: clamp(1.35rem, 3vw, 1.7rem);
   font-weight: 630;
   letter-spacing: -0.025em;
+  white-space: nowrap;
 }
 
 .deck-choice__copy span {
+  display: -webkit-box;
+  overflow: hidden;
   max-width: 25rem;
   font-size: 0.88rem;
   font-weight: 650;
   line-height: 1.35;
   opacity: 0.85;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
 }
 
 .deck-choice__action {
   display: inline-flex;
   align-self: end;
   align-items: center;
+  justify-self: end;
   justify-content: flex-end;
   gap: 0.35rem;
   font-size: 0.78rem;
@@ -428,6 +450,11 @@
 
 .deck-choice__action svg {
   width: 1rem;
+  height: 1rem;
+}
+
+.deck-choice__action-label--short {
+  display: none;
 }
 
 .how-to-play {
@@ -794,6 +821,10 @@
     transform: translateY(-0.35rem) rotate(0.6deg);
   }
 
+  .deck-choice--mixed:hover .deck-choice__face {
+    transform: translateY(-0.35rem);
+  }
+
   .text-button:hover {
     color: white;
   }
@@ -828,6 +859,10 @@
 
   .deck-choice {
     min-height: 19rem;
+  }
+
+  .deck-choice__icon {
+    justify-self: end;
   }
 
   .deck-choice__art {
@@ -870,6 +905,16 @@
 
   .keyboard-hint {
     display: none;
+  }
+}
+
+@media (max-width: 360px) {
+  .deck-choice__action-label--long {
+    display: none;
+  }
+
+  .deck-choice__action-label--short {
+    display: inline;
   }
 }
 

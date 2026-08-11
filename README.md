@@ -6,7 +6,7 @@ A mobile-first family guessing game inspired by physical sound and mime cards. P
 
 ## What is included
 
-- Two card types: **make a sound** and **act it out**
+- Sound, mime, and balanced mixed rounds
 - A fully Catalan player interface and card deck
 - A randomized eight-card round with scorekeeping
 - Touch-first controls, keyboard shortcuts, and reduced-motion support
@@ -75,8 +75,8 @@ tests/               Playwright end-to-end tests
 
 ## Sensible next iterations
 
-1. Add a round timer and mixed-deck mode.
+1. Add a round timer.
 2. Replace emoji with a cohesive original illustration set.
 3. Add optional Spanish and English localizations.
 4. Add custom decks, then introduce Supabase for sync only if needed.
-5. Add optional custom decks and persist unfinished rounds locally.
+5. Persist unfinished rounds locally.

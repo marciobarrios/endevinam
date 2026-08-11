@@ -7,6 +7,7 @@ import {
   Hand,
   PersonStanding,
   RotateCcw,
+  Shuffle,
   Sparkles,
   Volume2,
 } from "lucide-react"
@@ -22,6 +23,13 @@ type Screen = "home" | "playing" | "finished"
 const modeIcon = {
   sound: Volume2,
   mime: PersonStanding,
+  mixed: Shuffle,
+} as const
+
+const modeArt = {
+  sound: "🦁",
+  mime: "📷",
+  mixed: "🦁 📷",
 } as const
 
 function shuffle<T>(items: readonly T[]) {
@@ -74,15 +82,20 @@ function DeckButton({
             <Icon strokeWidth={2.5} />
           </span>
         </span>
-        <span className="deck-choice__art" aria-hidden="true">
-          {kind === "sound" ? "🦁" : "📷"}
+        <span
+          className={cn("deck-choice__art", kind === "mixed" && "deck-choice__art--mixed")}
+          aria-hidden="true"
+        >
+          {modeArt[kind]}
         </span>
         <span className="deck-choice__copy">
           <strong>{details.title}</strong>
           <span>{details.description}</span>
         </span>
         <span className="deck-choice__action" aria-hidden="true">
-          Tria aquesta baralla <ArrowRight />
+          <span className="deck-choice__action-label--long">Tria aquesta baralla</span>
+          <span className="deck-choice__action-label--short">Tria-la</span>
+          <ArrowRight />
         </span>
       </span>
     </button>
@@ -115,6 +128,7 @@ function HomeScreen({ onStart, ready }: { onStart: (kind: DeckKind) => void; rea
         <div className="deck-grid">
           <DeckButton kind="sound" onSelect={onStart} disabled={!ready} />
           <DeckButton kind="mime" onSelect={onStart} disabled={!ready} />
+          <DeckButton kind="mixed" onSelect={onStart} disabled={!ready} />
         </div>
       </section>
 
@@ -308,7 +322,7 @@ export function Game() {
 
   function startRound(selectedKind: DeckKind) {
     setKind(selectedKind)
-    setRound(shuffle(cards[selectedKind]).slice(0, ROUND_LENGTH))
+    setRound(createRound(selectedKind))
     setCardIndex(0)
     setScore(0)
     setScreen("playing")
@@ -354,4 +368,13 @@ export function Game() {
       </div>
     </main>
   )
+}
+
+function createRound(kind: DeckKind) {
+  if (kind !== "mixed") return shuffle(cards[kind]).slice(0, ROUND_LENGTH)
+
+  const soundCards = shuffle(cards.sound).slice(0, Math.ceil(ROUND_LENGTH / 2))
+  const mimeCards = shuffle(cards.mime).slice(0, Math.floor(ROUND_LENGTH / 2))
+
+  return shuffle([...soundCards, ...mimeCards])
 }

@@ -14,22 +14,6 @@ export const metadata: Metadata = {
     statusBarStyle: "black-translucent",
     title: "Endevina’m",
   },
-  icons: {
-    icon: [
-      {
-        url: "/icons/app-icon-192.png",
-        sizes: "192x192",
-        type: "image/png",
-      },
-    ],
-    apple: [
-      {
-        url: "/icons/apple-touch-icon.png",
-        sizes: "180x180",
-        type: "image/png",
-      },
-    ],
-  },
 }
 
 export const viewport: Viewport = {
