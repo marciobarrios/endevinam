@@ -1,0 +1,29 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "categories": {
+    "correctness": "error",
+    "pedantic": "allow",
+    "perf": "warn",
+    "restriction": "allow",
+    "style": "allow",
+    "suspicious": "warn"
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "ignorePatterns": [".next/**", "playwright-report/**", "test-results/**"],
+  "overrides": [
+    {
+      "files": ["tests/**/*.ts"],
+      "rules": {
+        "no-await-in-loop": "allow"
+      }
+    }
+  ],
+  "plugins": ["eslint", "typescript", "oxc", "react", "jsx-a11y", "nextjs"],
+  "rules": {
+    "jsx-a11y/prefer-tag-over-role": "allow",
+    "react/react-in-jsx-scope": "allow"
+  }
+}

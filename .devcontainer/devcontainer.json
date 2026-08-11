@@ -1,0 +1,11 @@
+{
+  "name": "Endevina’m",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-24-bookworm",
+  "forwardPorts": [3000],
+  "postCreateCommand": "corepack enable && pnpm install",
+  "customizations": {
+    "vscode": {
+      "extensions": ["oxc.oxc-vscode", "bradlc.vscode-tailwindcss", "ms-playwright.playwright"]
+    }
+  }
+}
