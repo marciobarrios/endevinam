@@ -487,14 +487,44 @@
   font-variant-numeric: tabular-nums;
 }
 
-.privacy-note {
+.home-footer {
   margin-top: auto;
   padding-top: 2.5rem;
+  text-align: center;
+}
+
+.privacy-note,
+.offline-status {
   color: rgb(255 255 255 / 58%);
   font-size: 0.72rem;
   font-weight: 650;
   letter-spacing: 0.04em;
-  text-align: center;
+}
+
+.offline-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.65rem;
+  color: rgb(255 255 255 / 72%);
+}
+
+.offline-status__dot {
+  width: 0.48rem;
+  height: 0.48rem;
+  border-radius: 50%;
+  background: var(--sun);
+  box-shadow: 0 0 0 0.2rem rgb(255 212 103 / 12%);
+}
+
+.offline-status--ready .offline-status__dot {
+  background: var(--mint);
+  box-shadow: 0 0 0 0.2rem rgb(142 216 176 / 12%);
+}
+
+.offline-status--error .offline-status__dot {
+  background: var(--coral);
+  box-shadow: 0 0 0 0.2rem rgb(245 138 124 / 12%);
 }
 
 .play-screen {

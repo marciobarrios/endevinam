@@ -1,3 +1,4 @@
+import { SerwistProvider } from "@serwist/turbopack/react"
 import type { Metadata, Viewport } from "next"
 import "@fontsource-variable/fredoka"
 import "@fontsource-variable/nunito"
@@ -26,7 +27,17 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="ca">
-      <body>{children}</body>
+      <body>
+        <SerwistProvider
+          swUrl="/serwist/sw.js"
+          disable={process.env.NODE_ENV !== "production"}
+          cacheOnNavigation={false}
+          reloadOnOnline={false}
+          options={{ updateViaCache: "none" }}
+        >
+          {children}
+        </SerwistProvider>
+      </body>
     </html>
   )
 }

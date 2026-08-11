@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Endevina’m">
+  <defs>
+    <radialGradient id="background" cx="28%" cy="18%" r="90%">
+      <stop offset="0" stop-color="#405b91" />
+      <stop offset="0.62" stop-color="#17305c" />
+      <stop offset="1" stop-color="#0e2144" />
+    </radialGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="18" stdDeviation="10" flood-color="#081d40" flood-opacity="0.48" />
+    </filter>
+  </defs>
+  <rect width="512" height="512" fill="url(#background)" />
+  <g filter="url(#shadow)" transform="rotate(-7 256 256)">
+    <rect x="142" y="142" width="228" height="228" rx="76" fill="#ffd467" />
+    <path
+      fill="#16284b"
+      d="M256 178c9 44 17 61 34 78-17 17-25 34-34 78-9-44-17-61-34-78 17-17 25-34 34-78Z"
+    />
+    <path
+      fill="#16284b"
+      d="M178 256c44-9 61-17 78-34 17 17 34 25 78 34-44 9-61 17-78 34-17-17-34-25-78-34Z"
+    />
+  </g>
+</svg>

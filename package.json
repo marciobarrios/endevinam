@@ -32,12 +32,15 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.62.1",
+    "@serwist/turbopack": "^9.5.12",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "esbuild": "^0.28.2",
     "oxfmt": "^0.63.0",
     "oxlint": "^1.78.0",
+    "serwist": "^9.5.12",
     "tailwindcss": "^4",
     "typescript": "^5"
   },
