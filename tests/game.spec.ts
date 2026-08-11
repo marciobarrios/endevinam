@@ -29,6 +29,22 @@ test("starts a mime round with the correct rules", async ({ page }) => {
   await expect(page.getByText("Fes servir tot el cos — sense cap soroll.")).toBeVisible()
 })
 
+test("plays a mixed round with sound and mime cards", async ({ page }) => {
+  await page.goto("/")
+  await page.getByRole("button", { name: /Juga amb la baralla mixta/ }).click()
+
+  const cardTypes = new Set<string>()
+
+  for (let card = 0; card < 8; card += 1) {
+    const type = await page.locator(".progress-block__labels span").nth(1).textContent()
+    if (type) cardTypes.add(type)
+
+    if (card < 7) await page.getByRole("button", { name: "Passo" }).click()
+  }
+
+  expect(cardTypes).toEqual(new Set(["Baralla de sons", "Baralla de mímica"]))
+})
+
 test("completes an eight-card round", async ({ page }) => {
   await page.goto("/")
   await page.getByRole("button", { name: /Juga amb la baralla de sons/ }).click()
