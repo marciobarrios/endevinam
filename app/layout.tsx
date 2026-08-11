@@ -1,3 +1,4 @@
+import { SerwistProvider } from "@serwist/turbopack/react"
 import type { Metadata, Viewport } from "next"
 import "@fontsource-variable/fredoka"
 import "@fontsource-variable/nunito"
@@ -13,6 +14,22 @@ export const metadata: Metadata = {
     statusBarStyle: "black-translucent",
     title: "Endevina’m",
   },
+  icons: {
+    icon: [
+      {
+        url: "/icons/app-icon-192.png",
+        sizes: "192x192",
+        type: "image/png",
+      },
+    ],
+    apple: [
+      {
+        url: "/icons/apple-touch-icon.png",
+        sizes: "180x180",
+        type: "image/png",
+      },
+    ],
+  },
 }
 
 export const viewport: Viewport = {
@@ -26,7 +43,17 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="ca">
-      <body>{children}</body>
+      <body>
+        <SerwistProvider
+          swUrl="/serwist/sw.js"
+          disable={process.env.NODE_ENV !== "production"}
+          cacheOnNavigation={false}
+          reloadOnOnline={false}
+          options={{ updateViaCache: "none" }}
+        >
+          {children}
+        </SerwistProvider>
+      </body>
     </html>
   )
 }

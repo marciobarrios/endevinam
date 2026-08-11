@@ -10,7 +10,8 @@ A mobile-first family guessing game inspired by physical sound and mime cards. P
 - A fully Catalan player interface and card deck
 - A randomized eight-card round with scorekeeping
 - Touch-first controls, keyboard shortcuts, and reduced-motion support
-- Installable web-app metadata
+- Installable web-app metadata and app icons
+- Build-versioned offline precaching for the complete game, fonts, and interface assets
 - A GitHub Codespaces development container
 - Oxlint, Oxfmt, TypeScript, Playwright, and GitHub Actions checks
 
@@ -78,4 +79,4 @@ tests/               Playwright end-to-end tests
 2. Replace emoji with a cohesive original illustration set.
 3. Add optional Spanish and English localizations.
 4. Add custom decks, then introduce Supabase for sync only if needed.
-5. Deploy to Vercel and add full offline caching.
+5. Add optional custom decks and persist unfinished rounds locally.

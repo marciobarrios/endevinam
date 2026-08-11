@@ -41,3 +41,31 @@ test("completes an eight-card round", async ({ page }) => {
   await expect(page.getByLabel("8 de 8 cartes endevinades")).toBeVisible()
   await expect(page.getByRole("button", { name: "Torna-hi amb aquesta baralla" })).toBeVisible()
 })
+
+test("loads and remains playable in a new page without a network", async ({ context, page }) => {
+  await page.goto("/")
+  await expect(page.locator('[data-offline-ready="true"]')).toContainText(
+    "A punt per jugar sense connexió",
+    { timeout: 30_000 },
+  )
+
+  await expect
+    .poll(() => page.evaluate(() => Boolean(navigator.serviceWorker.controller)))
+    .toBe(true)
+
+  await page.close()
+  await context.setOffline(true)
+
+  const offlinePage = await context.newPage()
+  const offlineResponse = await offlinePage.goto("/", { waitUntil: "domcontentloaded" })
+
+  expect(offlineResponse?.fromServiceWorker()).toBe(true)
+
+  await expect(
+    offlinePage.getByRole("heading", { name: "Endevina-ho. No ho diguis." }),
+  ).toBeVisible()
+  await expect(offlinePage.locator('[data-offline-ready="true"]')).toBeVisible()
+
+  await offlinePage.getByRole("button", { name: /Juga amb la baralla de sons/ }).click()
+  await expect(offlinePage.getByText("Imita el seu so")).toBeVisible()
+})
