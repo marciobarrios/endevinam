@@ -1,15 +1,16 @@
-export type DeckKind = "sound" | "mime"
+export type CardKind = "sound" | "mime"
+export type DeckKind = CardKind | "mixed"
 
 export type GameCard = {
   id: string
   label: string
   emoji: string
-  deck: DeckKind
+  deck: CardKind
 }
 
 export const ROUND_LENGTH = 8
 
-export const cards: Record<DeckKind, readonly GameCard[]> = {
+export const cards: Record<CardKind, readonly GameCard[]> = {
   sound: [
     { id: "sound-lion", label: "Lleó", emoji: "🦁", deck: "sound" },
     { id: "sound-train", label: "Train", emoji: "🚂", deck: "sound" },
@@ -44,16 +45,23 @@ export const deckDetails = {
   sound: {
     eyebrow: "Baralla de sons",
     title: "Fes un soroll",
-    description: "Rugeix, brunzeix i retruny. No valen paraules!",
+    description: "Rugeix i retruny. No valen paraules!",
     instruction: "Imita el seu so",
     reminder: "Només sorolls — no diguis la paraula.",
   },
   mime: {
     eyebrow: "Baralla de mímica",
     title: "Fes mímica",
-    description: "Gestos, postures i teatre. Sense fer cap soroll!",
+    description: "Gestos i teatre. Sense fer cap soroll!",
     instruction: "Fes mímica",
     reminder: "Fes servir tot el cos — sense cap soroll.",
+  },
+  mixed: {
+    eyebrow: "Baralla mixta",
+    title: "Barreja-ho tot",
+    description: "Sons i mímica. Mira què toca!",
+    instruction: "Segueix la carta",
+    reminder: "Pot tocar fer un soroll o mímica — fixa-t’hi!",
   },
 } as const satisfies Record<
   DeckKind,
