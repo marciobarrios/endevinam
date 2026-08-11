@@ -420,6 +420,7 @@
   font-size: clamp(1.35rem, 3vw, 1.7rem);
   font-weight: 630;
   letter-spacing: -0.025em;
+  white-space: nowrap;
 }
 
 .deck-choice__copy span {
