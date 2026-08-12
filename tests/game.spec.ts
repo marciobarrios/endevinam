@@ -1,5 +1,24 @@
 import { expect, test } from "@playwright/test"
 
+import { cards, createRoundDealer, type CardKind, ROUND_LENGTH } from "@/lib/cards"
+
+for (const kind of ["sound", "mime"] satisfies CardKind[]) {
+  test(`exhausts the ${kind} deck before repeating a card`, () => {
+    const dealRound = createRoundDealer(() => 0.42)
+    const completeRoundCount = Math.floor(cards[kind].length / ROUND_LENGTH)
+    const completeRounds = Array.from({ length: completeRoundCount }, () => dealRound(kind))
+    const dealtIds = completeRounds.flatMap((round) => round.map((card) => card.id))
+
+    expect(new Set(dealtIds).size).toBe(completeRoundCount * ROUND_LENGTH)
+
+    const latestRoundIds = new Set(completeRounds[completeRoundCount - 1].map((card) => card.id))
+    const nextRound = dealRound(kind)
+
+    expect(new Set(nextRound.map((card) => card.id)).size).toBe(ROUND_LENGTH)
+    expect(nextRound.every((card) => !latestRoundIds.has(card.id))).toBe(true)
+  })
+}
+
 test("starts a sound round and keeps score", async ({ page }) => {
   await page.goto("/")
 
