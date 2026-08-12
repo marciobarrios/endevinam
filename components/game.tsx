@@ -13,6 +13,7 @@ import {
 } from "lucide-react"
 import { useEffect, useState } from "react"
 
+import { OfflineStatus } from "@/components/offline-status"
 import { Button } from "@/components/ui/button"
 import { cards, deckDetails, type DeckKind, type GameCard, ROUND_LENGTH } from "@/lib/cards"
 import { cn } from "@/lib/utils"
@@ -143,7 +144,10 @@ function HomeScreen({ onStart, ready }: { onStart: (kind: DeckKind) => void; rea
         </li>
       </ol>
 
-      <p className="privacy-note">Sense comptes · Sense anuncis · Només jugar</p>
+      <footer className="home-footer">
+        <p className="privacy-note">Sense comptes · Sense anuncis · Només jugar</p>
+        <OfflineStatus />
+      </footer>
     </div>
   )
 }
