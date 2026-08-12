@@ -62,6 +62,241 @@ export const cards: Record<CardKind, readonly GameCard[]> = {
     { id: "sound-ghost", label: "Fantasma", emoji: "👻", deck: "sound" },
     { id: "sound-monster", label: "Monstre", emoji: "👹", deck: "sound" },
     { id: "sound-witch", label: "Bruixa", emoji: "🧙", deck: "sound" },
+    { id: "sound-donkey", label: "Ase", emoji: "🫏", deck: "sound" },
+    { id: "sound-goat", label: "Cabra", emoji: "🐐", deck: "sound" },
+    { id: "sound-turkey", label: "Gall dindi", emoji: "🦃", deck: "sound" },
+    { id: "sound-goose", label: "Oca", emoji: "🪿", deck: "sound" },
+    { id: "sound-hen", label: "Gallina", emoji: "🐔", deck: "sound" },
+    { id: "sound-chick", label: "Pollet", emoji: "🐤", deck: "sound" },
+    { id: "sound-crow", label: "Corb", emoji: "🐦‍⬛", deck: "sound" },
+    { id: "sound-parrot", label: "Lloro", emoji: "🦜", deck: "sound" },
+    { id: "sound-peacock", label: "Paó", emoji: "🦚", deck: "sound" },
+    { id: "sound-seagull", label: "Gavina", emoji: "🐦", deck: "sound" },
+    { id: "sound-cricket", label: "Grill", emoji: "🦗", deck: "sound" },
+    { id: "sound-mosquito", label: "Mosquit", emoji: "🦟", deck: "sound" },
+    { id: "sound-fly", label: "Mosca", emoji: "🪰", deck: "sound" },
+    { id: "sound-mouse", label: "Ratolí", emoji: "🐁", deck: "sound" },
+    { id: "sound-squirrel", label: "Esquirol", emoji: "🐿️", deck: "sound" },
+    { id: "sound-bear", label: "Ós", emoji: "🐻", deck: "sound" },
+    { id: "sound-tiger", label: "Tigre", emoji: "🐯", deck: "sound" },
+    { id: "sound-gorilla", label: "Goril·la", emoji: "🦍", deck: "sound" },
+    { id: "sound-seal", label: "Foca", emoji: "🦭", deck: "sound" },
+    { id: "sound-penguin", label: "Pingüí", emoji: "🐧", deck: "sound" },
+    { id: "sound-crocodile", label: "Cocodril", emoji: "🐊", deck: "sound" },
+    { id: "sound-camel", label: "Camell", emoji: "🐫", deck: "sound" },
+    { id: "sound-bat", label: "Ratpenat", emoji: "🦇", deck: "sound" },
+    { id: "sound-eagle", label: "Àguila", emoji: "🦅", deck: "sound" },
+    { id: "sound-hyena", label: "Hiena", emoji: "🐾", deck: "sound" },
+    { id: "sound-bus", label: "Autobús", emoji: "🚌", deck: "sound" },
+    { id: "sound-truck", label: "Camió", emoji: "🚚", deck: "sound" },
+    { id: "sound-subway", label: "Metro", emoji: "🚇", deck: "sound" },
+    { id: "sound-tram", label: "Tramvia", emoji: "🚊", deck: "sound" },
+    { id: "sound-rocket", label: "Coet", emoji: "🚀", deck: "sound" },
+    { id: "sound-bulldozer", label: "Buldòzer", emoji: "🚧", deck: "sound" },
+    { id: "sound-excavator", label: "Excavadora", emoji: "🏗️", deck: "sound" },
+    {
+      id: "sound-bicycle-bell",
+      label: "Timbre de bicicleta",
+      emoji: "🚲",
+      deck: "sound",
+    },
+    { id: "sound-scooter", label: "Patinet", emoji: "🛴", deck: "sound" },
+    { id: "sound-car-horn", label: "Clàxon", emoji: "🚗", deck: "sound" },
+    {
+      id: "sound-reversing-truck",
+      label: "Camió fent marxa enrere",
+      emoji: "🚛",
+      deck: "sound",
+    },
+    {
+      id: "sound-tire-screech",
+      label: "Pneumàtics derrapant",
+      emoji: "🛞",
+      deck: "sound",
+    },
+    {
+      id: "sound-engine-start",
+      label: "Motor engegant-se",
+      emoji: "⚙️",
+      deck: "sound",
+    },
+    { id: "sound-train-brakes", label: "Fre de tren", emoji: "🚆", deck: "sound" },
+    {
+      id: "sound-boat-horn",
+      label: "Sirena de vaixell",
+      emoji: "🛳️",
+      deck: "sound",
+    },
+    {
+      id: "sound-submarine-sonar",
+      label: "Sonar de submarí",
+      emoji: "🤿",
+      deck: "sound",
+    },
+    { id: "sound-chainsaw", label: "Serra mecànica", emoji: "🪚", deck: "sound" },
+    { id: "sound-drill", label: "Trepant", emoji: "🛠️", deck: "sound" },
+    { id: "sound-hammer", label: "Martell", emoji: "🔨", deck: "sound" },
+    { id: "sound-vacuum", label: "Aspiradora", emoji: "🧹", deck: "sound" },
+    {
+      id: "sound-hairdryer",
+      label: "Assecador de cabells",
+      emoji: "💨",
+      deck: "sound",
+    },
+    {
+      id: "sound-blender",
+      label: "Batedora elèctrica",
+      emoji: "🥤",
+      deck: "sound",
+    },
+    { id: "sound-washing-machine", label: "Rentadora", emoji: "🧺", deck: "sound" },
+    { id: "sound-microwave", label: "Microones", emoji: "🍲", deck: "sound" },
+    { id: "sound-toaster", label: "Torradora", emoji: "🍞", deck: "sound" },
+    {
+      id: "sound-kettle",
+      label: "Bullidor d’aigua",
+      emoji: "🫖",
+      deck: "sound",
+    },
+    { id: "sound-printer", label: "Impressora", emoji: "🖨️", deck: "sound" },
+    { id: "sound-keyboard", label: "Teclat", emoji: "⌨️", deck: "sound" },
+    {
+      id: "sound-camera-click",
+      label: "Càmera fent clic",
+      emoji: "📸",
+      deck: "sound",
+    },
+    { id: "sound-elevator", label: "Ascensor", emoji: "🛗", deck: "sound" },
+    {
+      id: "sound-cash-register",
+      label: "Caixa registradora",
+      emoji: "💵",
+      deck: "sound",
+    },
+    { id: "sound-lawnmower", label: "Tallagespa", emoji: "🌱", deck: "sound" },
+    { id: "sound-zipper", label: "Cremallera", emoji: "🤐", deck: "sound" },
+    { id: "sound-jingling-keys", label: "Claus dringant", emoji: "🔑", deck: "sound" },
+    { id: "sound-scissors", label: "Tisores", emoji: "✂️", deck: "sound" },
+    {
+      id: "sound-creaky-door",
+      label: "Porta grinyolant",
+      emoji: "🚪",
+      deck: "sound",
+    },
+    {
+      id: "sound-door-knock",
+      label: "Truquen a la porta",
+      emoji: "✊",
+      deck: "sound",
+    },
+    {
+      id: "sound-breaking-glass",
+      label: "Vidre trencant-se",
+      emoji: "🥛",
+      deck: "sound",
+    },
+    {
+      id: "sound-balloon-pop",
+      label: "Globus petant",
+      emoji: "🎈",
+      deck: "sound",
+    },
+    {
+      id: "sound-opening-can",
+      label: "Llauna obrint-se",
+      emoji: "🥫",
+      deck: "sound",
+    },
+    {
+      id: "sound-spray-bottle",
+      label: "Esprai polvoritzant",
+      emoji: "🧴",
+      deck: "sound",
+    },
+    {
+      id: "sound-dripping-tap",
+      label: "Aixeta degotant",
+      emoji: "🚰",
+      deck: "sound",
+    },
+    {
+      id: "sound-toilet-flush",
+      label: "Cisterna del vàter",
+      emoji: "🚽",
+      deck: "sound",
+    },
+    { id: "sound-shower", label: "Dutxa", emoji: "🚿", deck: "sound" },
+    { id: "sound-fan", label: "Ventilador", emoji: "🪭", deck: "sound" },
+    {
+      id: "sound-cuckoo-clock",
+      label: "Rellotge de cucut",
+      emoji: "🕰️",
+      deck: "sound",
+    },
+    {
+      id: "sound-school-bell",
+      label: "Timbre de l’escola",
+      emoji: "🏫",
+      deck: "sound",
+    },
+    { id: "sound-waves", label: "Onades del mar", emoji: "🌊", deck: "sound" },
+    { id: "sound-waterfall", label: "Cascada", emoji: "🏞️", deck: "sound" },
+    { id: "sound-river", label: "Riu corrent", emoji: "🏞️", deck: "sound" },
+    { id: "sound-crackling-fire", label: "Foc crepitant", emoji: "🔥", deck: "sound" },
+    { id: "sound-hail", label: "Calamarsa", emoji: "🌨️", deck: "sound" },
+    { id: "sound-avalanche", label: "Allau", emoji: "🏔️", deck: "sound" },
+    {
+      id: "sound-volcano",
+      label: "Volcà en erupció",
+      emoji: "🌋",
+      deck: "sound",
+    },
+    { id: "sound-earthquake", label: "Terratrèmol", emoji: "🌍", deck: "sound" },
+    {
+      id: "sound-crunching-leaves",
+      label: "Fulles trepitjades",
+      emoji: "🍂",
+      deck: "sound",
+    },
+    {
+      id: "sound-snapping-branch",
+      label: "Branca trencant-se",
+      emoji: "🌿",
+      deck: "sound",
+    },
+    { id: "sound-bubbles", label: "Bombolles", emoji: "🫧", deck: "sound" },
+    {
+      id: "sound-cracking-ice",
+      label: "Gel esquerdant-se",
+      emoji: "🧊",
+      deck: "sound",
+    },
+    { id: "sound-cough", label: "Tos", emoji: "🤒", deck: "sound" },
+    { id: "sound-hiccup", label: "Singlot", emoji: "😮", deck: "sound" },
+    { id: "sound-yawn", label: "Badall", emoji: "🥱", deck: "sound" },
+    { id: "sound-whistle", label: "Xiulet", emoji: "😗", deck: "sound" },
+    { id: "sound-applause", label: "Aplaudiments", emoji: "👏", deck: "sound" },
+    { id: "sound-kiss", label: "Petó", emoji: "💋", deck: "sound" },
+    { id: "sound-cry", label: "Plor", emoji: "😢", deck: "sound" },
+    { id: "sound-gargle", label: "Gàrgares", emoji: "🫗", deck: "sound" },
+    { id: "sound-heartbeat", label: "Batec del cor", emoji: "❤️", deck: "sound" },
+    { id: "sound-footsteps", label: "Passes caminant", emoji: "👣", deck: "sound" },
+    {
+      id: "sound-shivering",
+      label: "Tremolar de fred",
+      emoji: "🥶",
+      deck: "sound",
+    },
+    { id: "sound-gasp", label: "Ensurt sobtat", emoji: "😱", deck: "sound" },
+    { id: "sound-burp", label: "Rot", emoji: "🤭", deck: "sound" },
+    {
+      id: "sound-growling-stomach",
+      label: "Panxa rondinant",
+      emoji: "😋",
+      deck: "sound",
+    },
+    { id: "sound-piano", label: "Piano", emoji: "🎹", deck: "sound" },
+    { id: "sound-accordion", label: "Acordió", emoji: "🪗", deck: "sound" },
   ],
   mime: [
     { id: "mime-camera", label: "Càmera", emoji: "📷", deck: "mime" },
@@ -129,7 +364,388 @@ export const cards: Record<CardKind, readonly GameCard[]> = {
       deck: "mime",
     },
     { id: "mime-zombie", label: "Caminar com un zombi", emoji: "🧟", deck: "mime" },
+    { id: "mime-jump-rope", label: "Saltar a corda", emoji: "🪢", deck: "mime" },
+    { id: "mime-skateboard", label: "Anar amb monopatí", emoji: "🛹", deck: "mime" },
+    { id: "mime-bowling", label: "Jugar a bitlles", emoji: "🎳", deck: "mime" },
+    { id: "mime-golf", label: "Jugar a golf", emoji: "🏌️", deck: "mime" },
+    { id: "mime-archery", label: "Tir amb arc", emoji: "🏹", deck: "mime" },
+    { id: "mime-fencing", label: "Fer esgrima", emoji: "🤺", deck: "mime" },
+    { id: "mime-volleyball", label: "Jugar a voleibol", emoji: "🏐", deck: "mime" },
+    { id: "mime-handball", label: "Jugar a handbol", emoji: "🤾", deck: "mime" },
+    {
+      id: "mime-table-tennis",
+      label: "Jugar a ping-pong",
+      emoji: "🏓",
+      deck: "mime",
+    },
+    { id: "mime-badminton", label: "Jugar a bàdminton", emoji: "🏸", deck: "mime" },
+    { id: "mime-rugby", label: "Jugar a rugbi", emoji: "🏉", deck: "mime" },
+    { id: "mime-baseball", label: "Jugar a beisbol", emoji: "⚾", deck: "mime" },
+    { id: "mime-hockey", label: "Jugar a hoquei", emoji: "🏒", deck: "mime" },
+    {
+      id: "mime-diving-board",
+      label: "Saltar del trampolí",
+      emoji: "🤿",
+      deck: "mime",
+    },
+    {
+      id: "mime-horse-riding",
+      label: "Muntar a cavall",
+      emoji: "🏇",
+      deck: "mime",
+    },
+    { id: "mime-gymnastics", label: "Fer gimnàstica", emoji: "🤸", deck: "mime" },
+    { id: "mime-karate", label: "Fer karate", emoji: "🥋", deck: "mime" },
+    { id: "mime-wrestling", label: "Fer lluita", emoji: "🤼", deck: "mime" },
+    { id: "mime-kayaking", label: "Anar amb caiac", emoji: "🛶", deck: "mime" },
+    { id: "mime-snowboarding", label: "Fer snowboard", emoji: "🏂", deck: "mime" },
+    {
+      id: "mime-roller-skating",
+      label: "Patinar sobre rodes",
+      emoji: "🛼",
+      deck: "mime",
+    },
+    { id: "mime-hiking", label: "Fer senderisme", emoji: "🥾", deck: "mime" },
+    { id: "mime-hurdles", label: "Saltar tanques", emoji: "🏃‍➡️", deck: "mime" },
+    { id: "mime-billiards", label: "Jugar a billar", emoji: "🎱", deck: "mime" },
+    { id: "mime-darts", label: "Jugar als dards", emoji: "🎯", deck: "mime" },
+    { id: "mime-dentist", label: "Dentista", emoji: "🦷", deck: "mime" },
+    {
+      id: "mime-vet",
+      label: "Veterinari o veterinària",
+      emoji: "🐾",
+      deck: "mime",
+    },
+    { id: "mime-baker", label: "Forner o fornera", emoji: "🥖", deck: "mime" },
+    { id: "mime-waiter", label: "Cambrer o cambrera", emoji: "🍽️", deck: "mime" },
+    {
+      id: "mime-hairdresser",
+      label: "Perruquer o perruquera",
+      emoji: "💇",
+      deck: "mime",
+    },
+    {
+      id: "mime-gardener",
+      label: "Jardiner o jardinera",
+      emoji: "🪴",
+      deck: "mime",
+    },
+    {
+      id: "mime-mail-carrier",
+      label: "Carter o cartera",
+      emoji: "📮",
+      deck: "mime",
+    },
+    { id: "mime-builder", label: "Paleta", emoji: "🧱", deck: "mime" },
+    { id: "mime-judge", label: "Jutge o jutgessa", emoji: "⚖️", deck: "mime" },
+    { id: "mime-musician", label: "Músic o música", emoji: "🎼", deck: "mime" },
+    {
+      id: "mime-librarian",
+      label: "Bibliotecari o bibliotecària",
+      emoji: "📚",
+      deck: "mime",
+    },
+    { id: "mime-lifeguard", label: "Socorrista", emoji: "🛟", deck: "mime" },
+    {
+      id: "mime-bus-driver",
+      label: "Conductor o conductora d’autobús",
+      emoji: "🚌",
+      deck: "mime",
+    },
+    {
+      id: "mime-train-driver",
+      label: "Maquinista de tren",
+      emoji: "🚆",
+      deck: "mime",
+    },
+    {
+      id: "mime-flight-attendant",
+      label: "Auxiliar de vol",
+      emoji: "🛫",
+      deck: "mime",
+    },
+    {
+      id: "mime-reporter",
+      label: "Periodista amb micròfon",
+      emoji: "🎤",
+      deck: "mime",
+    },
+    { id: "mime-clown", label: "Pallasso o pallassa", emoji: "🤡", deck: "mime" },
+    { id: "mime-magician", label: "Mag o maga", emoji: "🪄", deck: "mime" },
+    {
+      id: "mime-archaeologist",
+      label: "Arqueòleg o arqueòloga",
+      emoji: "🏺",
+      deck: "mime",
+    },
+    {
+      id: "mime-beekeeper",
+      label: "Apicultor o apicultora",
+      emoji: "🐝",
+      deck: "mime",
+    },
+    {
+      id: "mime-cleaner",
+      label: "Personal de neteja",
+      emoji: "🧽",
+      deck: "mime",
+    },
+    {
+      id: "mime-tailor",
+      label: "Sastre o modista",
+      emoji: "🧵",
+      deck: "mime",
+    },
+    { id: "mime-florist", label: "Florista", emoji: "💐", deck: "mime" },
+    { id: "mime-sailor", label: "Mariner o marinera", emoji: "⚓", deck: "mime" },
+    { id: "mime-drummer", label: "Bateria", emoji: "🥁", deck: "mime" },
+    {
+      id: "mime-tying-shoelaces",
+      label: "Cordar-se les sabates",
+      emoji: "👟",
+      deck: "mime",
+    },
+    { id: "mime-combing-hair", label: "Pentinar-se", emoji: "💇", deck: "mime" },
+    { id: "mime-makeup", label: "Maquillar-se", emoji: "💄", deck: "mime" },
+    { id: "mime-shaving", label: "Afaitar-se", emoji: "🪒", deck: "mime" },
+    { id: "mime-getting-dressed", label: "Vestir-se", emoji: "👕", deck: "mime" },
+    { id: "mime-putting-on-coat", label: "Posar-se un abric", emoji: "🧥", deck: "mime" },
+    { id: "mime-opening-gift", label: "Obrir un regal", emoji: "🎁", deck: "mime" },
+    {
+      id: "mime-wrapping-gift",
+      label: "Embolicar un regal",
+      emoji: "🎀",
+      deck: "mime",
+    },
+    {
+      id: "mime-ironing-shirt",
+      label: "Planxar una camisa",
+      emoji: "👔",
+      deck: "mime",
+    },
+    { id: "mime-sweeping", label: "Escombrar", emoji: "🧹", deck: "mime" },
+    { id: "mime-mopping", label: "Fregar el terra", emoji: "🪣", deck: "mime" },
+    {
+      id: "mime-vacuuming",
+      label: "Passar l’aspiradora",
+      emoji: "🧹",
+      deck: "mime",
+    },
+    { id: "mime-making-bed", label: "Fer el llit", emoji: "🛏️", deck: "mime" },
+    {
+      id: "mime-hanging-laundry",
+      label: "Estendre la roba",
+      emoji: "👚",
+      deck: "mime",
+    },
+    { id: "mime-washing-dishes", label: "Rentar els plats", emoji: "🍽️", deck: "mime" },
+    { id: "mime-stirring-soup", label: "Remenar una sopa", emoji: "🥣", deck: "mime" },
+    { id: "mime-kneading-dough", label: "Pastar pa", emoji: "🍞", deck: "mime" },
+    { id: "mime-flipping-crepe", label: "Girar una crep", emoji: "🥞", deck: "mime" },
+    { id: "mime-peeling-banana", label: "Pelar un plàtan", emoji: "🍌", deck: "mime" },
+    {
+      id: "mime-squeezing-orange",
+      label: "Exprimir una taronja",
+      emoji: "🍊",
+      deck: "mime",
+    },
+    { id: "mime-smelling-flower", label: "Olorar una flor", emoji: "🌸", deck: "mime" },
+    { id: "mime-planting-seed", label: "Plantar una llavor", emoji: "🌱", deck: "mime" },
+    { id: "mime-watering-plants", label: "Regar les plantes", emoji: "🪴", deck: "mime" },
+    { id: "mime-walking-dog", label: "Passejar el gos", emoji: "🐕‍🦺", deck: "mime" },
+    {
+      id: "mime-feeding-baby",
+      label: "Donar menjar a un bebè",
+      emoji: "🍼",
+      deck: "mime",
+    },
+    {
+      id: "mime-changing-diaper",
+      label: "Canviar un bolquer",
+      emoji: "🧷",
+      deck: "mime",
+    },
+    {
+      id: "mime-shopping-cart",
+      label: "Empènyer un carro de la compra",
+      emoji: "🛒",
+      deck: "mime",
+    },
+    {
+      id: "mime-heavy-box",
+      label: "Portar una caixa molt pesada",
+      emoji: "📦",
+      deck: "mime",
+    },
+    { id: "mime-elevator", label: "Pujar en ascensor", emoji: "🛗", deck: "mime" },
+    { id: "mime-ladder", label: "Pujar una escala", emoji: "🪜", deck: "mime" },
+    {
+      id: "mime-opening-jar",
+      label: "Obrir un pot molt dur",
+      emoji: "🫙",
+      deck: "mime",
+    },
+    { id: "mime-flying-kite", label: "Fer volar un estel", emoji: "🪁", deck: "mime" },
+    {
+      id: "mime-sandcastle",
+      label: "Fer un castell de sorra",
+      emoji: "🏖️",
+      deck: "mime",
+    },
+    { id: "mime-snowman", label: "Fer un ninot de neu", emoji: "☃️", deck: "mime" },
+    {
+      id: "mime-brushing-pet",
+      label: "Raspallar una mascota",
+      emoji: "🐕",
+      deck: "mime",
+    },
+    {
+      id: "mime-rabbit",
+      label: "Saltar com un conill",
+      emoji: "🐇",
+      deck: "mime",
+    },
+    {
+      id: "mime-turtle",
+      label: "Caminar com una tortuga",
+      emoji: "🐢",
+      deck: "mime",
+    },
+    {
+      id: "mime-giraffe",
+      label: "Menjar fulles com una girafa",
+      emoji: "🦒",
+      deck: "mime",
+    },
+    {
+      id: "mime-snake",
+      label: "Arrossegar-se com una serp",
+      emoji: "🐍",
+      deck: "mime",
+    },
+    {
+      id: "mime-frog",
+      label: "Saltar com una granota",
+      emoji: "🐸",
+      deck: "mime",
+    },
+    {
+      id: "mime-cat",
+      label: "Rentar-se com un gat",
+      emoji: "🐈",
+      deck: "mime",
+    },
+    {
+      id: "mime-dog",
+      label: "Espolsar-se com un gos",
+      emoji: "🐕",
+      deck: "mime",
+    },
+    {
+      id: "mime-chicken",
+      label: "Caminar com una gallina",
+      emoji: "🐔",
+      deck: "mime",
+    },
+    {
+      id: "mime-horse",
+      label: "Galopar com un cavall",
+      emoji: "🐎",
+      deck: "mime",
+    },
+    {
+      id: "mime-bear",
+      label: "Caminar com un ós",
+      emoji: "🐻",
+      deck: "mime",
+    },
+    { id: "mime-lion", label: "Moure’s com un lleó", emoji: "🦁", deck: "mime" },
+    {
+      id: "mime-butterfly",
+      label: "Volar com una papallona",
+      emoji: "🦋",
+      deck: "mime",
+    },
+    { id: "mime-octopus", label: "Moure’s com un pop", emoji: "🐙", deck: "mime" },
+    {
+      id: "mime-robot",
+      label: "Caminar com un robot",
+      emoji: "🤖",
+      deck: "mime",
+    },
+    {
+      id: "mime-mummy",
+      label: "Caminar com una mòmia",
+      emoji: "🧟",
+      deck: "mime",
+    },
   ],
+}
+
+type DeckState = {
+  remaining: GameCard[]
+  recentIds: string[]
+}
+
+type RandomSource = () => number
+
+function shuffle<T>(items: readonly T[], random: RandomSource) {
+  const shuffled = [...items]
+
+  for (let index = shuffled.length - 1; index > 0; index -= 1) {
+    const randomIndex = Math.floor(random() * (index + 1))
+    ;[shuffled[index], shuffled[randomIndex]] = [shuffled[randomIndex], shuffled[index]]
+  }
+
+  return shuffled
+}
+
+export function createRoundDealer(random: RandomSource = Math.random) {
+  const deckState: Record<CardKind, DeckState> = {
+    sound: { remaining: [], recentIds: [] },
+    mime: { remaining: [], recentIds: [] },
+  }
+
+  function refill(kind: CardKind, additionallyDeferredIds: readonly string[] = []) {
+    // Refill as a shuffle bag, with the most recently dealt cards moved to the back.
+    const deferredIds = new Set([...deckState[kind].recentIds, ...additionallyDeferredIds])
+    const unseenCards = cards[kind].filter((card) => !deferredIds.has(card.id))
+    const deferredCards = cards[kind].filter((card) => deferredIds.has(card.id))
+
+    deckState[kind].remaining = [...shuffle(unseenCards, random), ...shuffle(deferredCards, random)]
+  }
+
+  function draw(kind: CardKind, count: number) {
+    const selected: GameCard[] = []
+
+    while (selected.length < count) {
+      if (deckState[kind].remaining.length === 0) {
+        refill(
+          kind,
+          selected.map((card) => card.id),
+        )
+      }
+
+      const needed = count - selected.length
+      selected.push(...deckState[kind].remaining.splice(0, needed))
+    }
+
+    deckState[kind].recentIds = [
+      ...deckState[kind].recentIds,
+      ...selected.map((card) => card.id),
+    ].slice(-ROUND_LENGTH)
+
+    return selected
+  }
+
+  return function dealRound(kind: DeckKind) {
+    if (kind !== "mixed") return draw(kind, ROUND_LENGTH)
+
+    const soundCards = draw("sound", Math.ceil(ROUND_LENGTH / 2))
+    const mimeCards = draw("mime", Math.floor(ROUND_LENGTH / 2))
+
+    return shuffle([...soundCards, ...mimeCards], random)
+  }
 }
 
 export const deckDetails = {

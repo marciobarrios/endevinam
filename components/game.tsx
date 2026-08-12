@@ -11,11 +11,17 @@ import {
   Sparkles,
   Volume2,
 } from "lucide-react"
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 import { OfflineStatus } from "@/components/offline-status"
 import { Button } from "@/components/ui/button"
-import { cards, deckDetails, type DeckKind, type GameCard, ROUND_LENGTH } from "@/lib/cards"
+import {
+  createRoundDealer,
+  deckDetails,
+  type DeckKind,
+  type GameCard,
+  ROUND_LENGTH,
+} from "@/lib/cards"
 import { cn } from "@/lib/utils"
 
 type Screen = "home" | "playing" | "finished"
@@ -31,17 +37,6 @@ const modeArt = {
   mime: "📷",
   mixed: "🦁 📷",
 } as const
-
-function shuffle<T>(items: readonly T[]) {
-  const shuffled = [...items]
-
-  for (let index = shuffled.length - 1; index > 0; index -= 1) {
-    const randomIndex = Math.floor(Math.random() * (index + 1))
-    ;[shuffled[index], shuffled[randomIndex]] = [shuffled[randomIndex], shuffled[index]]
-  }
-
-  return shuffled
-}
 
 function BrandMark({ compact = false }: { compact?: boolean }) {
   return (
@@ -309,6 +304,7 @@ function FinishScreen({ score, kind, onReplay, onExit }: FinishScreenProps) {
 }
 
 export function Game() {
+  const roundDealer = useRef(createRoundDealer())
   const [ready, setReady] = useState(false)
   const [screen, setScreen] = useState<Screen>("home")
   const [kind, setKind] = useState<DeckKind>("sound")
@@ -322,7 +318,7 @@ export function Game() {
 
   function startRound(selectedKind: DeckKind) {
     setKind(selectedKind)
-    setRound(createRound(selectedKind))
+    setRound(roundDealer.current(selectedKind))
     setCardIndex(0)
     setScore(0)
     setScreen("playing")
@@ -368,13 +364,4 @@ export function Game() {
       </div>
     </main>
   )
-}
-
-function createRound(kind: DeckKind) {
-  if (kind !== "mixed") return shuffle(cards[kind]).slice(0, ROUND_LENGTH)
-
-  const soundCards = shuffle(cards.sound).slice(0, Math.ceil(ROUND_LENGTH / 2))
-  const mimeCards = shuffle(cards.mime).slice(0, Math.floor(ROUND_LENGTH / 2))
-
-  return shuffle([...soundCards, ...mimeCards])
 }
