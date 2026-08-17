@@ -201,6 +201,7 @@ export const cards: Record<CardKind, readonly GameCard[]> = {
       emoji: "🎈",
       deck: "sound",
     },
+    { id: "sound-popcorn", label: "Crispetes", emoji: "🍿", deck: "sound" },
     {
       id: "sound-opening-can",
       label: "Llauna obrint-se",
@@ -334,6 +335,12 @@ export const cards: Record<CardKind, readonly GameCard[]> = {
     { id: "mime-painter", label: "Pintor o pintora", emoji: "🧑‍🎨", deck: "mime" },
     { id: "mime-scientist", label: "Científic o científica", emoji: "🧑‍🔬", deck: "mime" },
     { id: "mime-eating-pasta", label: "Menjar espaguetis", emoji: "🍝", deck: "mime" },
+    {
+      id: "mime-eating-popcorn",
+      label: "Menjar crispetes",
+      emoji: "🍿",
+      deck: "mime",
+    },
     { id: "mime-drinking", label: "Beure amb una palleta", emoji: "🥤", deck: "mime" },
     { id: "mime-umbrella", label: "Obrir un paraigua", emoji: "☂️", deck: "mime" },
     { id: "mime-reading", label: "Llegir un llibre", emoji: "📖", deck: "mime" },
