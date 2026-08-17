@@ -547,7 +547,6 @@ export const cards: Record<CardKind, readonly GameCard[]> = {
     },
     { id: "mime-washing-dishes", label: "Rentar els plats", emoji: "🍽️", deck: "mime" },
     { id: "mime-stirring-soup", label: "Remenar una sopa", emoji: "🥣", deck: "mime" },
-    { id: "mime-kneading-dough", label: "Pastar pa", emoji: "🍞", deck: "mime" },
     { id: "mime-flipping-crepe", label: "Girar una crep", emoji: "🥞", deck: "mime" },
     { id: "mime-peeling-banana", label: "Pelar un plàtan", emoji: "🍌", deck: "mime" },
     {
